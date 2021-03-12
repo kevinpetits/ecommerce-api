@@ -43,8 +43,8 @@ Route::delete('/delete_product/{id}', [ProductController::class, 'deleteProduct'
 /* Product Routes */
 
 /* Category Routes */
-Route::get('/categories', [CategoryController::class, 'index'])->middleware(['auth:api', 'scopes:admin']);
-Route::get('/category/{id}', [CategoryController::class, 'category'])->middleware(['auth:api', 'scopes:admin']);
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/category/{id}', [CategoryController::class, 'category']);
 Route::post('/create_category', [CategoryController::class, 'createCategory'])->middleware(['auth:api', 'scopes:admin']);
 Route::put('/update_category/{id}', [CategoryController::class, 'updateCategory'])->middleware(['auth:api', 'scopes:admin']);
 Route::delete('/delete_category/{id}', [CategoryController::class, 'deleteCategory'])->middleware(['auth:api', 'scopes:admin']);
