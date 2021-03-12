@@ -18,11 +18,11 @@ class ProductSeeder extends Seeder
 			[
                 'id' => 1,
 				'product_name' => 'Product 01',
+                'src' => '1.jpg',
 				'description' =>  'Incredible product 01 with an amazing price, offer in many colors and sizes, get it now!',
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '1.jpg',
                 'id_category' => 1
 			],
             [
@@ -32,7 +32,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '2.jpg',
+                'src' => '2.jpg',
                 'id_category' => 1
 			],
             [
@@ -42,7 +42,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '3.jpg',
+                'src' => '3.jpg',
                 'id_category' => 1
 			],
             [
@@ -52,7 +52,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '4.jpg',
+                'src' => '4.jpg',
                 'id_category' => 2
 			],
             [
@@ -62,7 +62,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '5.jpg',
+                'src' => '5.jpg',
                 'id_category' => 3
 			],
             [
@@ -72,7 +72,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '6.jpg',
+                'src' => '6.jpg',
                 'id_category' => 4
 			],
             [
@@ -82,7 +82,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '7.jpg',
+                'src' => '7.jpg',
                 'id_category' => 1
 			],
             [
@@ -92,7 +92,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '8.jpg',
+                'src' => '8.jpg',
                 'id_category' => 2
 			],
             [
@@ -102,7 +102,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '9.jpg',
+                'src' => '9.jpg',
                 'id_category' => 2
 			],
             [
@@ -112,7 +112,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '10.jpg',
+                'src' => '10.jpg',
                 'id_category' => 1
 			],
             [
@@ -122,7 +122,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '11.jpg',
+                'src' => '11.jpg',
                 'id_category' => 5
 			],
             [
@@ -132,7 +132,7 @@ class ProductSeeder extends Seeder
 				'status' => 'New',
                 'inventory' => 500,
                 'price' => rand(10, 200),
-                'image' => '12.jpg',
+                'src' => '12.jpg',
                 'id_category' => 5
 			],
         );
