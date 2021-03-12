@@ -46,6 +46,6 @@ class CategorySeeder extends Seeder
 				'active' => 1,
 			]
         );
-        Product::insert($data);
+        Category::insert($data);
     }
 }
