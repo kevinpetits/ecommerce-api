@@ -39,6 +39,15 @@ class Handler extends ExceptionHandler
     {
         $this->renderable(function (Exception $exception, $request) {
 
+            if (str_contains($exception->getMessage(), 'unserialize')) {
+                $cookie1 = \Cookie::forget('laravel_session');
+                $cookie2 = \Cookie::forget('XSRF-TOKEN');
+
+                return redirect()->to('/')
+                             ->withCookie($cookie1)
+                             ->withCookie($cookie2);
+            }
+
         if($exception instanceof ValidationException){
             return response([
                 'errors' => $exception->errors()
