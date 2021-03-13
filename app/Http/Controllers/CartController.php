@@ -11,7 +11,8 @@ class CartController extends Controller
 {
     public function index(Request $request)
     {
-        return \Cart::session($request->user()->id)->getContent();
+        return $request->user()->id;
+        // return \Cart::session($request->user()->id)->getContent();
         // return uniqid($request->user()->id);
     }
 
