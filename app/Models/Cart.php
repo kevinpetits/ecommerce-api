@@ -17,13 +17,11 @@ class Cart extends Model
 
     public function setCartDataAttribute($value)
     {
-        mb_internal_encoding('utf-8');
-        $this->attributes['cart_data'] = serialize($value);
+        $this->attributes['cart_data'] = serialize(utf8_encode($value));
     }
 
     public function getCartDataAttribute($value)
     {
-        mb_internal_encoding('iso-8859-1');
         // $string = preg_replace('!s:(\d+):"(.*?)";!se', "'s:'.strlen('$2').':\"$2\";'", $value);
         return unserialize(utf8_encode($value));
     }
