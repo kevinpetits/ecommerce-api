@@ -30,6 +30,6 @@ class Cart extends Model
             },
             $value
         );
-        return unserialize(utf8_encode($string));
+        return unserialize($string);
     }
 }
