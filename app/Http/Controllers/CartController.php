@@ -12,9 +12,7 @@ class CartController extends Controller
     public function index(Request $request)
     {
         // return $request->user()->id;
-        $cart = \Cart::session($request->user()->id)->getContent()->toArray();
-
-        return Response::json($cart);
+        return \Cart::session($request->user()->id)->getContent();
         // return uniqid($request->user()->id);
     }
 
