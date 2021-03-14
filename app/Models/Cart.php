@@ -17,7 +17,7 @@ class Cart extends Model
 
     public function setCartDataAttribute($value)
     {
-        $this->attributes['cart_data'] = serialize($value);
+        $this->attributes['cart_data'] = serialize(utf8_encode($value));
     }
 
     public function getCartDataAttribute($value)
