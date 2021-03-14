@@ -22,14 +22,7 @@ class Cart extends Model
 
     public function getCartDataAttribute($value)
     {
-        $string = preg_replace_callback(
-            '!s:(\d+):"(.*?)";!s',
-            function ($matches) {
-                if ( isset( $matches[2] ) )
-                    return 's:'.strlen($matches[2]).':"'.$matches[2].'";';
-            },
-            $value
-        );
+        $string = preg_replace('!s:(\d+):"(.*?)";!se', "'s:'.strlen('$2').':\"$2\";'", $value);
         return unserialize($string);
     }
 }
