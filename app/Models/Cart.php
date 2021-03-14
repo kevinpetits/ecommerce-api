@@ -17,7 +17,7 @@ class Cart extends Model
 
     public function setCartDataAttribute($value)
     {
-        mb_internal_encoding('iso-8859-1');
+        mb_internal_encoding('utf-8');
         $this->attributes['cart_data'] = serialize($value);
     }
 
