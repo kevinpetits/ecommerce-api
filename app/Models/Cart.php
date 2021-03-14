@@ -17,12 +17,12 @@ class Cart extends Model
 
     public function setCartDataAttribute($value)
     {
-        $this->attributes['cart_data'] = serialize(json_encode($value));
+        $this->attributes['cart_data'] = base64_encode(serialize($value));
     }
 
     public function getCartDataAttribute($value)
     {
         // $string = preg_replace('!s:(\d+):"(.*?)";!se', "'s:'.strlen('$2').':\"$2\";'", $value);
-        return unserialize(utf8_encode($value));
+        return unserialize(base64_decode($value));
     }
 }
