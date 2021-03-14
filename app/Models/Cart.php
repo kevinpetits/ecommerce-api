@@ -22,6 +22,6 @@ class Cart extends Model
 
     public function getCartDataAttribute($value)
     {
-        return unserialize($value);
+        return unserialize(utf8_decode($value));
     }
 }
